@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'blitz',
+    loadChildren: () => import('./pages/blitz/blitz.module').then( m => m.BlitzPageModule)
+  },
+  {
+    path: 'barrage',
+    loadChildren: () => import('./pages/barrage/barrage.module').then( m => m.BarragePageModule)
+  },
 ];
 
 @NgModule({

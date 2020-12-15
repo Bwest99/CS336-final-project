@@ -25,3 +25,33 @@
 #container a {
   text-decoration: none;
 }
+
+.selectorButton{
+  width: 45%;
+  height: 200px;
+}
+
+.description{
+flex: 1 1 auto;
+  margin: 2px;
+}
+
+#blitz{
+  float: left;
+}
+
+#barrage{
+  float: right;
+}
+
+.upperText{
+  float: top
+}
+
+.lowerText{
+  float: bottom;
+}
+
+.flexContainer{
+  display: flex;
+}

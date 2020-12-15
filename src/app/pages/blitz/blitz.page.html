@@ -1,0 +1,31 @@
+<ion-header >
+  <ion-toolbar>
+    <span class="material-icons" (click)='goToHome()'>arrow_back</span>
+    <ion-title>BLITZ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="blue">
+  <mat-card class="cardContent">
+      MESSAGE
+      <br>
+      <textarea class="divFill" [(ngModel)]="message"></textarea>
+  </mat-card>
+
+  <mat-card class="cardContent">
+      TARGET
+      <input type="text" class="tempInput" [(ngModel)]="phoneNum">
+      <app-contact-display checkbox="false" (result)="setTarget($event)"></app-contact-display>
+  </mat-card>
+
+  <mat-card class="cardContent">
+      # OF MESSAGES
+      <br><br>
+      <app-message-counter messageMax="20" (result)="setCount($event)"></app-message-counter>
+  </mat-card>
+</ion-content>
+
+<ion-button (click)="sendMessage()">
+  LAUNCH!  
+  <i class="material-icons">gps_fixed</i>
+</ion-button>

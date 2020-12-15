@@ -1,0 +1,13 @@
+<div *ngIf= "check" class="checkbox">
+  <mat-checkbox  *ngFor="let contact of contactList" [value]="contact.phoneNumbers[0].value" (change)="checkboxChanged($event)">
+    {{contact.name.givenName}}: {{contact.phoneNumbers[0].value}}
+  </mat-checkbox>
+</div>
+
+<div *ngIf="!check" class="checkbox">
+  <mat-radio-group  [(ngModel)]="target">
+    <mat-radio-button class="radioOption" *ngFor="let contact of contactList" [value]="contact.phoneNumbers[0].value" (change)="radioChanged($event)">
+      {{contact.name.givenName}}: {{contact.phoneNumbers[0].value}}
+    </mat-radio-button>
+  </mat-radio-group>
+</div>

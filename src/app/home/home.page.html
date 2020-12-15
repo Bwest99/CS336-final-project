@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      BLITZKRIEG
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,38 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">BLITZKRIEG</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <span>
+      <ion-button class="selectorButton" (click)="goToBlitz()">
+        <span>LAUNCH <br> BLITZ</span>
+        <span class="material-icons">brightness_high</span>
+      </ion-button>
+    </span>
+
+    <span>
+      <ion-button class="selectorButton" (click)="goToBarrage()"> 
+        <span class="upperText">LAUNCH <br> BARRAGE</span> 
+        <i class="material-icons">gps_fixed</i>
+      </ion-button>
+    </span>
+    
+    <div class="flexContainer">
+      <mat-card class="description">
+        <mat-card-content>
+          Send up to 20 messages to a single target.
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card class="description">
+        <mat-card-content>
+          Send up to 10 messages to up to 5 targets
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
+  
 </ion-content>
